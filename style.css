@@ -1,0 +1,264 @@
+/* ベース設定 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  color: #333;
+  background-color: #fefefe;
+  line-height: 2;
+  text-align: center;
+}
+
+/* 背景画像があるページ用 */
+.background-image {
+  background-image: url('IMG_4284.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ヘッダー固定 */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* コンテンツ基本余白 */
+main, .content, .profile-card {
+  padding-top: 100px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* index ページ */
+h1 {
+  font-size: 2rem;
+  color: black;
+}
+
+p {
+  font-size: 1.2rem;
+  color: black;
+}
+
+/* プロフィールカード */
+.profile-card {
+  max-width: 800px;
+  margin: 120px auto;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid lightskyblue;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.basic-info p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.kihon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.toi {
+  font-weight: bold;
+  color: skyblue;
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 120px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin: 30px 0;
+  font-size: 1.2rem;
+}
+
+.info-grid span,
+.long-text span {
+  display: inline-block;
+  background-color: skyblue;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.long-text {
+  font-size: 1.2rem;
+}
+
+/* 強みカード型セクション */
+.activity-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: left;
+}
+
+.activity-card h2 {
+  font-size: 1.6rem;
+  color: #4682b4;
+  margin-bottom: 1rem;
+}
+
+.activity-card h3 {
+  font-size: 1.1rem;
+  margin-top: 1.2rem;
+  color: #2f4f4f;
+  border-left: 4px solid #4682b4;
+  padding-left: 0.8rem;
+}
+
+.activity-card p {
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem;
+  line-height: 1.6;
+}
+
+/* セクション画像 */
+.activity-photo {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* チャートコンテナ */
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.chart-section {
+  text-align: center;
+}
+
+.chart-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.chart-comment {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+}
+
+.arrow {
+  font-size: 3rem;
+  color:#0066cc;
+}
+
+.goal-section, .future-section {
+  padding: 30px;
+  margin-top: 60px;
+}
+
+.goal-section h2, .future-section h2 {
+  color: skyblue;
+  font-size: 1.8rem;
+}
+
+.goal-text, .future-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: black;
+  margin-bottom: 1.5em;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .site-header {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .profile-card {
+    padding: 20px;
+    margin-top: 120px;
+  }
+
+  .top-section {
+    flex-direction: column;
+  }
+
+  .basic-info {
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-card {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
