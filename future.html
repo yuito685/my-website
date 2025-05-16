@@ -109,6 +109,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       new Chart(document.getElementById("currentChart"), createChartConfig(beforeData, "現在", "rgba(255,99,132,1)"));
       new Chart(document.getElementById("idealChart"), createChartConfig(afterData, "理想", "rgba(54,162,235,1)"));
     });
+     const likeBtn = document.getElementById("like-button");
+
+  likeBtn.addEventListener("click", () => {
+    if (likeBtn.classList.contains("liked")) return; // 二重クリック防止
+
+    likeBtn.classList.add("liked");
+    likeBtn.textContent = "👍 ありがとう！";
+
+    // GA4に送信（GTM経由）
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      event: "like_click",
+      button_id: "future-like"
+    });
+  });
   </script>
 </body>
 </html>
