@@ -22,7 +22,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="site-header">
     <a href="index.html">top</a>
     <a href="career.html">profile</a>
-    <a href="about.html">strength
+    <a href="about.html">strength</a>
     <a href="future.html">future</a>
   </header>
 
@@ -43,28 +43,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </section>
     </div>
 
-    <section class="goal-section">
-      <h2>今後の目標</h2>
-     <ul class="goal-text">
-        <li>計画を立てて行動する習慣をつける </li>
-        <li>主体的に動き、挑戦を恐れない姿勢を持つ</li>
-        <li>自分の意見を持ち、他者に伝える力を養う</li>
-      </p>
-    </section>
+    <!-- ※中略（冒頭は今のままでOK） -->
+<section class="goal-section">
+  <h2>今後の目標</h2>
+  <ul class="goal-text">
+    <li>計画を立てて行動する習慣をつける </li>
+    <li>主体的に動き、挑戦を恐れない姿勢を持つ</li>
+    <li>自分の意見を持ち、他者に伝える力を養う</li>
+  </ul> <!-- ←ここが本来の閉じタグ -->
+</section>
 
-    <section class="future-section">
-      <h2>将来の夢</h2>
-      <p class="future-text">
-        将来の夢はITコンサルタントとして、企業の課題解決に貢献することです。ITの力で社会に貢献したいという思いから、IT業界を志望しています。
-      </p>
-      <p class="future-text">
-        コンサルタントという職種を目指す理由は、課題の分析から提案までの流れにやりがいを感じると同時に、人との対話を通じて信頼関係を築くことが好きだからです
-      </p
-       <button id="like-button" onclick="dataLayer.push({event: 'like_click'})">
+<section class="future-section">
+  <h2>将来の夢</h2>
+  <p class="future-text">
+    将来の夢はITコンサルタントとして、企業の課題解決に貢献することです。ITの力で社会に貢献したいという思いから、IT業界を志望しています。
+  </p>
+  <p class="future-text">
+    コンサルタントという職種を目指す理由は、課題の分析から提案までの流れにやりがいを感じると同時に、人との対話を通じて信頼関係を築くことが好きだからです。
+  </p>
+
+  <!-- 👍 いいねボタン -->
+  <button id="like-button" onclick="dataLayer.push({event: 'like_click'})">
     👍 この目標、いいね！
   </button>
+</section>
 
-    </section>
   </main>
 
   <script>
