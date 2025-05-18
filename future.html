@@ -13,6 +13,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>将来の目標</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    let pvCount = sessionStorage.getItem('pv_count') ? parseInt(sessionStorage.getItem('pv_count')) : 0;
+    pvCount++;
+    sessionStorage.setItem('pv_count', pvCount);
+
+    dataLayer.push({
+      event: 'pageview',
+      pv_count: pvCount
+    });
+  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
