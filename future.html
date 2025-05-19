@@ -135,6 +135,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     dataLayer.push({
       event: "like_click",
       button_id: "future-like"
+      // 上部の「いいね」「シェア」ボタン用
+function setupReactionButton(buttonId) {
+  const button = document.getElementById(buttonId);
+  if (!button) return;
+
+  button.addEventListener("click", () => {
+    if (button.classList.contains("clicked")) return;
+
+    button.classList.add("clicked");
+    button.textContent = "👍 ありがとう！";
+
+    // GA4に送信（GTM経由）
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      event: "reaction_click",
+      reaction_type: button.getAttribute("data-reaction"),
+      reaction_count: 1
+    });
+  });
+}
+
+setupReactionButton("likeBtn");
+setupReactionButton("shareBtn");
+
     });
   });
   </script>
