@@ -2,12 +2,13 @@
 <html lang="ja">
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMNCJBT2');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMNCJBT2');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>将来の目標</title>
@@ -26,11 +27,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
   </script>
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMNCJBT2"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMNCJBT2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header class="site-header">
     <a href="index.html">top</a>
     <a href="career.html">profile</a>
@@ -41,6 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main class="content">
     <h1>将来について</h1>
     <h2>現状と理想の比較</h2>
+
     <div class="chart-container">
       <section class="chart-section">
         <h2>現在</h2>
@@ -55,38 +59,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </section>
     </div>
 
-    <!-- ※中略（冒頭は今のままでOK） -->
-<section class="goal-section">
-  <h2>今後の目標</h2>
-  <ul class="goal-text">
-    <li>計画を立てて行動する習慣をつける </li>
-    <li>主体的に動き、挑戦を恐れない姿勢を持つ</li>
-    <li>自分の意見を持ち、他者に伝える力を養う</li>
-  </ul> <!-- ←ここが本来の閉じタグ -->
-</section>
-<button id="likeBtn" data-reaction="like">いいね</button>
-<button id="shareBtn" data-reaction="share">シェア</button>
-<section class="future-section">
-  <h2>将来の夢</h2>
-  <p class="future-text">
-    将来の夢はITコンサルタントとして、企業の課題解決に貢献することです。ITの力で社会に貢献したいという思いから、IT業界を志望しています。
-  </p>
-  <p class="future-text">
-    コンサルタントという職種を目指す理由は、課題の分析から提案までの流れにやりがいを感じると同時に、人との対話を通じて信頼関係を築くことが好きだからです。
-  </p>
+    <section class="goal-section">
+      <h2>今後の目標</h2>
+      <ul class="goal-text">
+        <li>計画を立てて行動する習慣をつける</li>
+        <li>主体的に動き、挑戦を恐れない姿勢を持つ</li>
+        <li>自分の意見を持ち、他者に伝える力を養う</li>
+      </ul>
+    </section>
 
-  <!-- 👍 いいねボタン -->
-  <button id="like-button" onclick="dataLayer.push({event: 'like_click'})">
-    👍 この目標、いいね！
-  </button>
-</section>
+    <!-- 上部リアクションボタン -->
+    <button id="likeBtn" data-reaction="like">いいね</button>
+    <button id="shareBtn" data-reaction="share">シェア</button>
 
+    <section class="future-section">
+      <h2>将来の夢</h2>
+      <p class="future-text">
+        将来の夢はITコンサルタントとして、企業の課題解決に貢献することです。ITの力で社会に貢献したいという思いから、IT業界を志望しています。
+      </p>
+      <p class="future-text">
+        コンサルタントという職種を目指す理由は、課題の分析から提案までの流れにやりがいを感じると同時に、人との対話を通じて信頼関係を築くことが好きだからです。
+      </p>
+
+      <!-- 下部いいねボタン -->
+      <button id="like-button">
+        👍 この目標、いいね！
+      </button>
+    </section>
   </main>
 
   <script>
+    // グラフ描画
     const labels = ["コミュニケーション力", "論理的思考力", "主体性", "タイムマネジメント", "問題解決力", "創造力"];
     const beforeData = [3, 2, 2, 1, 3, 1];
     const afterData = [5, 5, 5, 4, 5, 4];
+
     const createChartConfig = (data, label, color) => ({
       type: 'radar',
       data: {
@@ -118,49 +125,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         plugins: { legend: { display: false } }
       }
     });
+
     window.addEventListener('DOMContentLoaded', () => {
       new Chart(document.getElementById("currentChart"), createChartConfig(beforeData, "現在", "rgba(255,99,132,1)"));
       new Chart(document.getElementById("idealChart"), createChartConfig(afterData, "理想", "rgba(54,162,235,1)"));
     });
-     const likeBtn = document.getElementById("like-button");
 
-  likeBtn.addEventListener("click", () => {
-    if (likeBtn.classList.contains("liked")) return; // 二重クリック防止
-
-    likeBtn.classList.add("liked");
-    likeBtn.textContent = "👍 ありがとう！";
-
-    // GA4に送信（GTM経由）
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({
-      event: "like_click",
-      button_id: "future-like"
-      // 上部の「いいね」「シェア」ボタン用
-function setupReactionButton(buttonId) {
-  const button = document.getElementById(buttonId);
-  if (!button) return;
-
-  button.addEventListener("click", () => {
-    if (button.classList.contains("clicked")) return;
-
-    button.classList.add("clicked");
-    button.textContent = "👍 ありがとう！";
-
-    // GA4に送信（GTM経由）
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({
-      event: "reaction_click",
-      reaction_type: button.getAttribute("data-reaction"),
-      reaction_count: 1
+    // 下の「この目標いいね！」ボタンの処理
+    const likeBtn = document.getElementById("like-button");
+    likeBtn.addEventListener("click", () => {
+      if (likeBtn.classList.contains("liked")) return;
+      likeBtn.classList.add("liked");
+      likeBtn.textContent = "👍 ありがとう！";
+      window.dataLayer.push({
+        event: "like_click",
+        button_id: "future-like"
+      });
     });
-  });
-}
 
-setupReactionButton("likeBtn");
-setupReactionButton("shareBtn");
+    // 上部の「いいね」「シェア」ボタン用共通処理
+    function setupReactionButton(buttonId) {
+      const button = document.getElementById(buttonId);
+      if (!button) return;
 
-    });
-  });
+      button.addEventListener("click", () => {
+        if (button.classList.contains("clicked")) return;
+        button.classList.add("clicked");
+        button.textContent = "👍 ありがとう！";
+        window.dataLayer.push({
+          event: "reaction_click",
+          reaction_type: button.getAttribute("data-reaction"),
+          reaction_count: 1
+        });
+      });
+    }
+
+    setupReactionButton("likeBtn");
+    setupReactionButton("shareBtn");
   </script>
 </body>
 </html>
