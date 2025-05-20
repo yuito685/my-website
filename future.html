@@ -58,8 +58,8 @@
     </section>
 
     <!-- 上部リアクションボタン -->
-    <button id="likeBtn" data-reaction="like">いいね</button>
-    <button id="shareBtn" data-reaction="share">シェア</button>
+    <button id="likeBtn" data-reaction="like">頑張って！</button>
+    <button id="shareBtn" data-reaction="share">❤️</button>
 
     <section class="future-section">
       <h2>将来の夢</h2>
@@ -72,7 +72,7 @@
 
       <!-- 下部いいねボタン -->
       <button id="like-button">
-        👍 この目標、いいね！
+        👍 応援します！
       </button>
     </section>
   </main>
@@ -120,7 +120,7 @@
       new Chart(document.getElementById("idealChart"), createChartConfig(afterData, "理想", "rgba(54,162,235,1)"));
     });
 
-    // 下の「この目標いいね！」ボタンの処理
+    // 下の応援するねボタンの処理
     const likeBtn = document.getElementById("like-button");
     likeBtn.addEventListener("click", () => {
       if (likeBtn.classList.contains("liked")) return;
