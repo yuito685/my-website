@@ -216,13 +216,15 @@ p {
   line-height: 1.8;
   color: black;
   margin-bottom: 1.5em;
+
   list-style-position: inside;
-  text-align: center;
+  text-align: left;
   padding-left: 0;
-  display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  display: table;
 }
+
 
 
 .future-text {
