@@ -210,12 +210,28 @@ p {
   font-size: 1.8rem;
 }
 
-.goal-text, .future-text {
+/* 目標リスト（中央揃え＆リスト点含む） */
+.goal-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: black;
+  margin-bottom: 1.5em;
+  list-style-position: inside;
+  text-align: center;
+  padding-left: 0;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.future-text {
   font-size: 1.2rem;
   line-height: 1.8;
   color: black;
   margin-bottom: 1.5em;
 }
+
 
 /* スマホ対応 */
 @media (max-width: 768px) {
