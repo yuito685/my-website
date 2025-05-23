@@ -120,17 +120,7 @@
       new Chart(document.getElementById("idealChart"), createChartConfig(afterData, "理想", "rgba(54,162,235,1)"));
     });
 
-    // 下の応援するねボタンの処理
-    const likeBtn = document.getElementById("like-button");
-    likeBtn.addEventListener("click", () => {
-      if (likeBtn.classList.contains("liked")) return;
-      likeBtn.classList.add("liked");
-      likeBtn.textContent = "👍 ありがとう！";
-      window.dataLayer.push({
-        event: "like_click",
-        button_id: "future-like"
-      });
-    });
+   
 
     // 上部の「いいね」「シェア」ボタン用共通処理
     function setupReactionButton(buttonId) {
@@ -147,6 +137,17 @@
           reaction_count: 1
         });
       });
+       // 下の応援するねボタンの処理
+    const likeBtn = document.getElementById("like-button");
+    likeBtn.addEventListener("click", () => {
+      if (likeBtn.classList.contains("liked")) return;
+      likeBtn.classList.add("liked");
+      likeBtn.textContent = "👍 ありがとう！";
+      window.dataLayer.push({
+        event: "like_click",
+        button_id: "future-like"
+      });
+    });
     }
 
     setupReactionButton("likeBtn");
